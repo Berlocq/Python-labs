@@ -9,8 +9,17 @@
 <body>
     <h1>Author name {{ object.name }}</h1>
     <a href="{% url 'author-list' %}">All Authors</a></br>
-    {{ object.book_name }}</br>
+    {{ object.book_name}}</br>
 
-    
+    <h2></h2>
+        <ul>
+        {% for Genre in object.genres.all %}
+            <li>{{ Genre }}</li>
+        {% endfor %}
+        </ul>
+
+
+    {{ object.style}}</br>
+    {{ object.description}}</br>
 </body>
 </html>

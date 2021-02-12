@@ -12,6 +12,7 @@
             <td>#</td>
             <td>name</td>
             <td>book_name</td>            
+            <td>genres</td>            
             <td>actions</td>            
         </tr>
     
@@ -20,6 +21,7 @@
         <td>{{ author.pk }}</td>
         <td><a href="{% url 'author-detail' author.pk%}"> {{ author.name }} </a></td>
         <td>{{ author.book_name }}</td>
+        <td>{{ author.genres.all|length }}</td>
         <td><a href="{% url 'author-delete' author.pk%}"> delete </a></td>
 
     </tr>

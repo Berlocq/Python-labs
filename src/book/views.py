@@ -17,14 +17,15 @@ def author_detail(request, pk):
 def author_delete(request, pk):
     author = Author.objects.get(pk=pk)
     message = f'Author { author.name } has been delete!!'
+    genres = author.genres.all().delete()
     author.delete()
     context = {"message": message}
     context = {'object': author}
     return render(request, template_name='delete.html', context=context)
 
-def author_create(request):
-    context = {}
-    return render(request, template_name='create.html', context=context)
+# def author_create(request):
+#     context = {}
+#     return render(request, template_name='create.html', context=context)
 
 
 # def home_page(request):
