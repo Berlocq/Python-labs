@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>#</td>
+            <td>name</td>
+            <td>book_name</td>            
+            <td>actions</td>            
+        </tr>
+    
+    {% for author in author %}
+    <tr>
+        <td>{{ author.pk }}</td>
+        <td><a href="{% url 'author-detail' author.pk%}"> {{ author.name }} </a></td>
+        <td>{{ author.book_name }}</td>
+        <td><a href="{% url 'author-delete' author.pk%}"> delete </a></td>
+
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

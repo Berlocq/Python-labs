@@ -14,11 +14,17 @@ class Author(models.Model):
         return f'{self.name} {self.book_name}'    
           
 class Genre(models.Model): 
-    Author = models.ForeignKey(
-        'book.Author',
+    author = models.ForeignKey(
+        'Author',
         verbose_name='Author',
         on_delete=models.PROTECT,
-        related_name="genres")
+        related_name="genres",
+        )
+    # id = models.CharField(
+    #     verbose_name='pk',
+    #     primary_key=True,
+    #     max_length=50
+    # )    
     style = models.CharField(
         verbose_name='style book',
         max_length=50,
@@ -32,6 +38,11 @@ class Genre(models.Model):
 
     
     def __str__(self):
-        return f'{self.Author.id} {self.Author.name} {self.style} {self.description}'
-        #return f'{self.author.name} {self.style} {self.description}'    
+        return f'{self.author.name} {self.author.book_name} {self.style} {self.description}'
+
+
+
+
+
+        #return f' {self.style} {self.description}'    
         
