@@ -25,7 +25,7 @@ SECRET_KEY = '9zq@2k9c4khq=qj@(9li8q20!&tm$s8519=1rjm4u_ig*ijf%='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['berlocq.pythonanywhere.com']
 
 
 # Application definition
@@ -37,9 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'crispy_forms',
     'book'
-    
 ]
 
 MIDDLEWARE = [
@@ -57,7 +55,7 @@ ROOT_URLCONF = 'proj.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,7 +117,6 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-
-# STATIC_ROOT = '/home/Berlocq/lab3/static/'
+STATIC_ROOT = '/home/Berlocq/lab3/static/'
 STATIC_URL = '/static/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
