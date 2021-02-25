@@ -19,13 +19,16 @@
     {% for author in author %}
     <tr>
         <td>{{ author.pk }}</td>
-        <td><a href="{% url 'author-detail' author.pk%}"> {{ author.name }} </a></td>
+        <td><a href="{% url 'author-detail-cbv' author.pk%}"> {{ author.name }} </a></td>
         <td>{{ author.book_name }}</td>
         <td>{{ author.genres.all|length }}</td>
-        <td><a href="{% url 'author-delete' author.pk%}"> delete </a></td>
+        <td>
+            <a href="{% url 'author-delete' author.pk%}"> delete </a>
+            <a href="{% url 'author-update' author.pk%}"> update </a></td>
 
     </tr>
     {% endfor %}
 </table>
+<a href="{% url 'author-create' %}">Add author</a>
 </body>
 </html>

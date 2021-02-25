@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+{{ page_title }}
+{% endblock title %}
+
+{% block main_content %}
+<h1>Add Izdatel!</h1>
+{{ form_data }}
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_table }}
+    <button>Add</button>
+</form>
+
+
+    {{ object.izdatel_name}}</br>
+    {% endblock main_content %}
