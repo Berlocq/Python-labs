@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+{{ page_title }}
+{% endblock title %}
+
+{% block main_content %}
+<h1>Add Series!</h1>
+{{ form_data }}
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_table }}
+    <button>Add</button>
+</form>
+
+
+    {{ object.style}}</br>
+    {{ object.description}}</br>
+    {% endblock main_content %}

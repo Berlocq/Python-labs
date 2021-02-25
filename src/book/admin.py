@@ -12,7 +12,7 @@ class AuthorAdmin(admin.ModelAdmin):
 class GenreAdmin(admin.ModelAdmin):
     list_display = [
         'pk',
-        'Author',
+        'author',
         'style',
         'description'
     ]

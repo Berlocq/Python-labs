@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Author name {{ object.name }}</h1>
+    <a href="{% url 'author-list-cbv' %}">All Authors</a></br>
+    {{ object.book_name}}</br>
+    
+
+    <h2></h2>
+        <ul>
+        {% for Genre in object.genres.all %}
+            <li>{{ Genre }}</li>
+        {% endfor %}
+        </ul>
+
+        
+    {{ object.style}}</br>
+    {{ object.description}}</br>
+    
+</body>
+</html>

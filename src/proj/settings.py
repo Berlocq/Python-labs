@@ -120,3 +120,4 @@ USE_TZ = True
 STATIC_ROOT = '/home/Berlocq/lab3/static/'
 STATIC_URL = '/static/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
